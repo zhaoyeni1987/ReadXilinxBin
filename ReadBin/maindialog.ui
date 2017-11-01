@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>maindialogClass</class>
+ <widget class="QDialog" name="maindialogClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>659</width>
+    <height>805</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ReadBin</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Open</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>test</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>338</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Partition Lists:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidgetPartitionLists">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Partition Inforamtion: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tableWidgetPartitionInfo">
+       <row>
+        <property name="text">
+         <string>分区数据大小</string>
+        </property>
+        <property name="toolTip">
+         <string>分区数据长度（字长表示）</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>写数据长度</string>
+        </property>
+        <property name="toolTip">
+         <string>解密的分区中的数据长度（字长表示），这个值和未解密的分区的数据长度一致</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>分区总大小</string>
+        </property>
+        <property name="toolTip">
+         <string>对应于这个分区头表的启动镜像分区的大小，可能包含一些未使用的留作扩展的空间</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>引导地址</string>
+        </property>
+        <property name="toolTip">
+         <string>向存储中引导镜像的地址，这个地址就是PS数据写入的地方，这部分对PL的比特流分区不适用</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>执行地址</string>
+        </property>
+        <property name="toolTip">
+         <string>可执行文件启动的位置，这部分对PL的比特流分区不适用</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>分区偏移量</string>
+        </property>
+        <property name="toolTip">
+         <string>从分区数据所对应的引导映像的开始到此分区头表起始的字节数</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>属性</string>
+        </property>
+        <property name="toolTip">
+         <string>第5位被设置为比特流分区，第4位被设置为PS分区，其余保留</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>分区数据段数</string>
+        </property>
+        <property name="toolTip">
+         <string>从分区数据所对应的引导映像的开始到此分区头表起始的字节数</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>校验和偏移量</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>保留</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>AC偏移量</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>保留</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>保留</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>保留</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>保留</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>校验和</string>
+        </property>
+        <property name="toolTip">
+         <string>用于第一段启动加载程序检查头部的有效性，校验是对此结构中的所有以前值的和按位非</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Value</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string>分区数据长度（字长表示）</string>
+        </property>
+        <property name="whatsThis">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="1" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+       </item>
+       <item row="2" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="3" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="4" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="5" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="6" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="7" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="8" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="9" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="10" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="11" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="12" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="13" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="14" column="0">
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="15" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QLabel" name="label_3">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Attribution:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QTextEdit" name="textEditAttriInfo">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="maindialog.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>maindialogClass</receiver>
+   <slot>test()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>768</x>
+     <y>637</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>maindialogClass</receiver>
+   <slot>OpenBin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>228</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidgetPartitionLists</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>maindialogClass</receiver>
+   <slot>ClickedPartitionLists(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>390</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidgetPartitionLists</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>maindialogClass</receiver>
+   <slot>PartitionListsChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>629</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>test()</slot>
+  <slot>OpenBin()</slot>
+  <slot>ClickedPartitionLists(QModelIndex)</slot>
+  <slot>PartitionListsChanged(int)</slot>
+ </slots>
+</ui>
